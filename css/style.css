@@ -1,4 +1,54 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+  font-family: sans-serif;
+  color: #ffff;
+}
+
+h1 {
+  font-size: 24px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: #ffff;
+  padding: 40px 40px;
+  text-transform: uppercase;
+}
+
+.location,
+.temprature {
+  height: 30vh;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temprature {
+  flex-direction: column;
+}
+
+.degree-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.degree-section span {
+  margin: 10px;
+  font-size: 30px;
+}
+
+.degree-section h2 {
+  font-size: 40px;
 }
