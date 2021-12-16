@@ -6,49 +6,77 @@
 
 body {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+  width: 100vw;
+  background: #444;
   font-family: sans-serif;
-  color: #ffff;
+
+  font-size: small;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 30px;
   display: flex;
   align-content: center;
   justify-content: center;
   color: #ffff;
   padding: 40px 40px;
   text-transform: uppercase;
+  background-color: #222;
 }
 
-.location,
-.temprature {
-  height: 30vh;
-  width: 50%;
+.channel-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
   align-items: center;
 }
 
-.temprature {
+.channel-card {
+  display: flex;
   flex-direction: column;
-}
-
-.degree-section {
-  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  margin: 2%;
+  width: 40%;
+  height: 70%;
   align-items: center;
-  cursor: pointer;
+  background: #333;
+
+  font-weight: 300;
+  font-size: 0.9rem;
 }
 
-.degree-section span {
-  margin: 10px;
-  font-size: 30px;
+.Img {
+  width: 100%;
+  height: 50%;
+  border-radius: 20px 20px 0 0;
 }
 
-.degree-section h2 {
-  font-size: 40px;
+.card-Info {
+  margin: 1rem;
+  white-space: wrap;
+}
+
+.player {
+  background: #dddd;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+}
+p.card-Info {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
 }
