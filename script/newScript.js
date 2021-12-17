@@ -2,7 +2,7 @@ const URL = "https://api.sr.se/api/v2/channels?format=json";
  
 const channelCards = document.getElementById("channel-container")
 
-const fetchChannelData = () => {
+const fetchChannels = () => {
   fetch(URL)
     .then(res => res.json())
     .then(channel => displayChannel(channel))
@@ -12,18 +12,19 @@ const fetchChannelData = () => {
       });
 };
 
-fetchChannelData()
+fetchChannels()
 
 const displayChannel = (channel) => {
   let output = ""
 
   channel.channels.forEach(eachChannel => {
-    //  console.log(eachChannel)
+      console.log(eachChannel)
 
     output += `
       <div class="channel-card">
         <img class= "Img" src=${!eachChannel.image ? "../asset/pic.png" : eachChannel.image}
         <p>${eachChannel.name}</p>
+        
         <p class="card-Info"  #${eachChannel.color};>${eachChannel.tagline}</p>
         <a href ="link" src =${eachChannel.liveaudio.url}>
           <audio class="player" controls> 
@@ -36,6 +37,3 @@ const displayChannel = (channel) => {
   });
 }
 
-// <a href="" targer="default" ></a>  MAkes the link open on a new page or tab
-
-// audio
